@@ -1,5 +1,5 @@
 [project]
-name = "my-mcp-tools"
+name = "midaug-mcp-tools"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,6 +9,8 @@ dependencies = [
     "zhdate>=0.1.0",
 ]
 
+[project.scripts]
+midaug-mcp-tools = "mcp_server.main:app"
 
 [[tool.uv.index]]
 url = "https://mirrors.aliyun.com/pypi/simple/"
