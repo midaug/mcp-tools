@@ -20,6 +20,7 @@ if __name__ == "__main__":
     # 启动服务器（支持多种传输方式）
     
     # 方式1: STDIO（适合Claude Desktop等客户端）
+    # mcp.run(transport="stdio")
     mcp.run(transport="stdio")
     
     # 方式2: HTTP（适合Web客户端）
