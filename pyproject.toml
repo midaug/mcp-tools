@@ -5,9 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "fastmcp>=1.0.0",
+    "fastmcp>=2.13.1",
     "zhdate>=0.1.0",
 ]
+
 
 [[tool.uv.index]]
 url = "https://mirrors.aliyun.com/pypi/simple/"
