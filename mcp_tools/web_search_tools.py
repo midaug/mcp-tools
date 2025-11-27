@@ -14,7 +14,7 @@ def search(query: str) -> str:
     """
     # 从环境变量获取配置
     searxng_host = os.getenv("SEARXNG_HOST", "http://localhost:8080")
-    count = int(os.getenv("SEARXNG_COUNT", "5"))
+    count = int(os.getenv("SEARXNG_COUNT", "10"))
     language = os.getenv("SEARXNG_LANGUAGE", "zh")
     
     # 构建API URL
@@ -41,7 +41,7 @@ def search(query: str) -> str:
                 simplified_results.append({
                     "title": item.get("title", ""),
                     "url": item.get("url", ""),
-                    "content": item.get("content", "")[:20000]  # 限制内容长度
+                    "content": item.get("content", "")[:200000]  # 限制内容长度
                 })
             
             # 返回精简的JSON
