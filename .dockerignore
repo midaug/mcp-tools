@@ -1,0 +1,41 @@
+# 排除版本控制目录
+.git/
+.gitignore
+
+# 排除虚拟环境目录
+.venv/
+venv/
+env/
+
+# 排除缓存目录
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# 排除日志文件
+*.log
+
+# 排除测试相关
+tests/
+test_*.py
+*_test.py
+
+# 排除文档
+docs/
+*.md
+
+# 排除IDE相关文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 排除系统文件
+.DS_Store
+Thumbs.db
+
+# 排除uv锁文件
+uv.lock

@@ -11,7 +11,7 @@ mcp = FastMCP("MD的工具箱")
 
 # === 注册时间工具 ===
 @mcp.tool()
-def get_current_time() -> TextContent:
+def get_current_time(unused_param=None) -> TextContent:
     """获取当前时间格式化后的的日期时间字符串，格式：yyyy年MM月dd日 HH点mm分ss秒 星期，农历"""
     try:
         info = time_tools.get_complete_calendar_info()
@@ -30,12 +30,12 @@ def web_search(query: str) -> TextContent:
 
 if __name__ == "__main__":
     # 启动服务器（支持多种传输方式）
-    
+
     # 方式1: STDIO（适合Claude Desktop等客户端）
-    mcp.run(transport="stdio")
-    
+    # mcp.run(transport="stdio")
+
     # 方式2: HTTP（适合Web客户端）
-    # mcp.run(transport="http", host="0.0.0.0", port=8000)
-    
+    mcp.run(transport="http", host="0.0.0.0", port=8000)
+
     # 方式3: SSE（Server-Sent Events）
     # mcp.run(transport="sse", host="0.0.0.0", port=8000)

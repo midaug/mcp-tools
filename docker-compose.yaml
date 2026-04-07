@@ -1,0 +1,19 @@
+services:
+  mcp-tools:
+    build:
+      context: .
+      dockerfile: Dockerfile.optimized
+    container_name: mcp-tools
+    ports:
+      - "8000:8000"
+    environment:
+      # 使用你现有的 SearXNG 服务地址
+      - SEARXNG_HOST=http://10.0.0.108:17890
+    network_mode: bridge
+    mem_limit: 512m
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
